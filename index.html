@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do I need an oil change?</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet"> 
+</head>
+
+
+<body>
+
+  <header> 
+    <section class="h1Section">
+      <div class="wrapper">
+        <h1>Do I need an <span class="h1_1">oil</span> change?</h1>
+     </div>
+    </section>
+  </header>
+  
+  <!--FORM SECTION-->
+  <section class="formSection"> 
+    <div class="wrapper2">
+
+      <form action="#" method="post" name="oilChangeForm">
+        
+        <label for="unit">What units of measurement does your odometer use?</label>
+        <select id="unit" name="unit" required>
+          <option value disabled selected>Please choose an option</option>
+          <option value="km">Kilometres</option>
+          <option value="miles">Miles</option>
+        </select>
+
+        <label for="odoLastOilChange" placeholder="kms">What was your odometer reading when you last got your oil changed?</label>
+        <input type="number" id="odoStart" name="oilChange" required>
+        
+        <label for="odoCurrent" placeholder="kms">What is your odometer reading now?</label>
+        <input type="number" id="odoEnd" name="oilChange" required>
+          
+        <label for="lastOilType">Which type of oil is currently in your car?</label>
+        <select id="lastOilType" name="oilChange" required>
+          <option value disabled selected>Please choose an option</option>
+          <option value="synthetic">Synthetic</option>
+          <option value="conventional">Conventional (non-synthetic) </option>
+          <option value="noIdea">I have no idea</option>
+        </select>
+<!--BUTTONS-->
+            <div class="buttonContainer">
+              <button type="submit" class="submitButton">Submit</button>
+              <button type="reset" class="resetButton">Reset</button> 
+            </div>
+      </form>
+    </div>
+  </section>
+
+<!--ANSWER SECTION-->
+  <section class="answerSection">
+    <div class="answer">
+      <p class="oilChangeStatus"></p> 
+        <div class="answerExplanation">
+          <p class="remaining"></p>
+          <p class="nextChange"></p>
+        </div>
+    </div> 
+  </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
