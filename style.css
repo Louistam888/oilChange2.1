@@ -72,14 +72,6 @@ h1 {
   color: rgba(209, 175, 25, 0.897)
 }
 
-.h1_6 {
-  animation-name: fade1;
-  animation-duration: 3s;
-}
-
-
-
-
 /**************/
 /* FORM STYLES*/
 /**************/
@@ -158,13 +150,6 @@ label {
   background-color: rgba(255, 0, 0, 0.753);
 }
 
-/*.submitButton:hover, 
-.submitButton:focus, 
-.resetButton:hover,
-.resetButton:focus {
-  transform: scale(1.2);
-}*/
-
 .submitButton:active,
 .resetButton:active {
   animation: push 0.1s ease-in-out;
@@ -183,7 +168,7 @@ label {
 
 .answerSection {
   background-color: rgb(209, 176, 27);
-  height: 25vh;
+  height: 35vh;
 }
 
 .answer {
@@ -203,7 +188,7 @@ label {
   width: 50%;
 }
 
-.oilChangeStatus {
+.nope, .yup, .huh {
   font-size: 20rem;
   text-transform: uppercase;
   width: 30%;
@@ -211,12 +196,14 @@ label {
   text-align: right;
   font-family: 'Rubik Dirt', cursive;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  animation: change 0.2s ease;
 }
 
-/* @keyframes fade2 {
+@keyframes change {
   0% {opacity: 0;}
-  100%: {opacity: 1;}
-} */
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
 
 .nope {
   color: green;
@@ -240,7 +227,7 @@ label {
   line-height: 1;  
 }
 
-.nextChange {
+.nextChange, .information {
   text-align: center;
   margin-top: 15px;
   font-size: 6rem;
@@ -281,16 +268,6 @@ label {
     height: auto;
   }
 
-  .oilChangeStatus {
-    font-size: 15rem;
-    text-transform: uppercase;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-  }
-
   .answerExplanation {
     width: 100%;
     padding-top: 0px;
@@ -307,11 +284,24 @@ label {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .nope, .yup, .huh {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1000px) {
   h1 {
     font-size: 3.8rem;
+  }
+
+  .nope, .yup, .huh {
+    font-size: 15rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -354,7 +344,7 @@ label {
 
 
 @media (max-width: 600px) {
-  .oilChangeStatus {
+  .nope, .yup, .huh {
     font-size: 10rem;
   }
 
