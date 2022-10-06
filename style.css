@@ -110,7 +110,6 @@ fieldset {
   border: 2px solid white;
 }
 
-
 label, input, select {
   margin: 2.5px 0;
   font-size: 2.5rem;
@@ -168,16 +167,16 @@ label {
 
 .answerSection {
   background-color: rgb(209, 176, 27);
-  height: 35vh;
+  height: 335px;
 }
 
 .answer {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 335px;
   padding: 5px;
 }
 
@@ -185,18 +184,18 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 70%;  
 }
 
 .nope, .yup, .huh {
-  font-size: 20rem;
+  font-size: 17rem;
   text-transform: uppercase;
   width: 30%;
-  margin-right: 60px;
   text-align: right;
   font-family: 'Rubik Dirt', cursive;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
   animation: change 0.2s ease;
+  margin-right: 75px;
 }
 
 @keyframes change {
@@ -224,21 +223,20 @@ label {
   color: rgb(0, 0, 0);
   text-shadow: -0.5px -0.5px 0 whitesmoke, 0.5px -0.5px 0 whitesmoke, -0.5px 0.5px 0 whitesmoke, 0.5px 0.5px 0 whitesmoke;
   white-space: pre-wrap;
-  line-height: 1;  
 }
 
-.nextChange, .information {
+.nextChange {
   text-align: center;
   margin-top: 15px;
-  font-size: 6rem;
+  margin-bottom: 0;
+  font-size: 5rem;
   color: rgba(235, 45, 45, 0.973);
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
+
  .remaining, .nextChange {
   letter-spacing: 0.5px;
   text-align: left;
-  margin-top: auto;
-  margin-bottom: auto;
 }
     
 /****************/
@@ -279,16 +277,24 @@ label {
   .remaining, .nextChange {
     letter-spacing: 0.5px;
     text-align: center;
-    margin-top: auto;
     margin-bottom: auto;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .remaining {
+    margin-top: auto;
+  }
+
+  .nextChange {
+    margin-top: 10px;
   }
 
   .nope, .yup, .huh {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
@@ -298,7 +304,6 @@ label {
   }
 
   .nope, .yup, .huh {
-    font-size: 15rem;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -339,9 +344,7 @@ label {
     margin-bottom: 0px;
     margin-top: 10px;
   }
-
 }
-
 
 @media (max-width: 600px) {
   .nope, .yup, .huh {
