@@ -26,8 +26,6 @@ form.addEventListener("submit", (event)=> {
   const addCommas = (num) => { 
     return num.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","); 
   }; 
-
-  console.log(addCommas(100000 - mileage))
   
   //function to remove commas from numbers 
   const removeCommas = (num) => {

@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet"> 
 </head>
 
-
 <body>
 
   <header> 
@@ -43,10 +42,10 @@
         </select>
 
         <label for="odoLastOilChange" placeholder="kms">What was your odometer reading when you last got your oil changed?</label>
-        <input type="number" id="odoStart" name="oilChange" required>
+        <input type="number" id="odoStart" name="oilChange" required aria-label="input odometer reading at last oil change">
         
         <label for="odoCurrent" placeholder="kms">What is your odometer reading now?</label>
-        <input type="number" id="odoEnd" name="oilChange" required>
+        <input type="number" id="odoEnd" name="oilChange" required aria-label="input current odometer reading">
           
         <label for="lastOilType">Which type of oil is currently in your car?</label>
         <select id="lastOilType" name="oilChange" required>
@@ -55,6 +54,7 @@
           <option value="conventional">Conventional (non-synthetic) </option>
           <option value="noIdea">I have no idea</option>
         </select>
+
 <!--BUTTONS-->
             <div class="buttonContainer">
               <button type="submit" class="submitButton">Submit</button>
